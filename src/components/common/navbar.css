@@ -1,19 +1,22 @@
-/* Navbar.css */
+/* =========================================
+   GLOBAL & DESKTOP STYLES
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
 
 .navbar-container {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 90px;
   background-color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  display: flex; /* Desktop uses Flexbox */
+  align-items: center;
+  padding-right: 50px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding-right: 50px; 
+  position: relative;
+  z-index: 100;
   box-sizing: border-box;
 }
 
-/* --- LOGO SECTION --- */
+/* --- DESKTOP LOGO STYLES (Red Slant) --- */
 .navbar-logo-wrapper {
   background-color: #9d2222;
   height: 100%;
@@ -22,25 +25,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 25px; /* Adjusts center alignment to account for the slant */
+  padding-right: 25px;
   margin-right: auto; 
 }
 
-/* Updated Image Styles */
 .navbar-logo-img {
-  max-width: 140px; /* Adjust this to make your logo bigger or smaller */
-  max-height: 80px; /* Ensures it doesn't overflow vertically */
+  max-width: 140px;
+  max-height: 80px;
   object-fit: contain;
 }
 
-/* Remove old text styles if you want, or just leave them unused */
-.navbar-logo-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* --- LINKS SECTION --- */
+/* --- LINKS --- */
 .navbar-links {
   display: flex;
   list-style: none;
@@ -53,39 +48,176 @@
 .nav-link {
   text-decoration: none;
   color: #1a1a1a;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav-link.active,
-.nav-link:hover {
+.nav-link.active, .nav-link:hover {
   color: #cc2b2b;
 }
 
-/* --- BUTTON SECTION --- */
+/* --- BUTTONS --- */
 .navbar-btn {
   background-color: #c92a2a;
   color: white;
   border: none;
   padding: 12px 35px;
   border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   white-space: nowrap;
 }
 
-.navbar-btn:hover {
-  background-color: #a01f1f;
+/* --- HIDE MOBILE ELEMENTS ON DESKTOP --- */
+.mobile-menu-icon,
+.mobile-search-icon,
+.navbar-links-mobile,
+.mobile-btn-wrapper {
+  display: none;
 }
 
-@media (max-width: 850px) {
-  .navbar-links {
-    display: none;
-  }
+/* =========================================
+   MOBILE RESPONSIVE (Max-width: 600px)
+   Covers iPhone 14 Pro Max & smaller phones
+   ========================================= */
+@media (max-width: 600px) {
+
   .navbar-container {
-    padding-right: 20px;
+    /* 1. GRID LAYOUT ADJUSTMENT */
+    /* Col 1: Menu (Auto Width) */
+    /* Col 2: Logo Area (Takes remaining space) */
+    /* Col 3: Search (Auto Width) */
+    display: grid !important;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    
+    /* 2. Visual Style */
+    background-color: #b91c1c !important; /* Bold Red */
+    padding: 0 15px; /* Side padding */
+    height: 90px;
+  }
+
+  /* --- HAMBURGER MENU (Col 1) --- */
+  .mobile-menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45px;
+    height: 28px; /* Taller for distinct separation */
+    cursor: pointer;
+    z-index: 101;
+    /* No margin needed, grid places it first */
+  }
+
+  .hamburger-lines {
+    display: contents; /* Allows children to use parent flex */
+  }
+
+  .line {
+    display: block;
+    height: 6px; /* Extra Thick lines */
+    width: 100%;
+    background-color: #000000;
+    border-radius: 4px;
+    margin-bottom: 5px; /* Spacing between lines */
+  }
+  
+  .line:last-child {
+    margin-bottom: 0;
+  }
+  
+  .close-icon {
+    font-size: 45px;
+    color: white;
+    line-height: 0.5;
+  }
+
+  /* --- LOGO WRAPPER (Col 2) --- */
+  .navbar-logo-wrapper {
+    /* Reset Desktop Styles */
+    background-color: transparent !important;
+    clip-path: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    
+    /* ALIGNMENT FIX: Move Logo to the LEFT */
+    display: flex;
+    justify-content: flex-start; /* Aligns logo to left */
+    align-items: center;
+    padding-left: 15px !important; /* Spacing between Menu and Logo */
+  }
+
+  .navbar-logo-img {
+    max-width: 130px; /* Big, readable size */
+    max-height: 70px;
+    filter: brightness(0) invert(1); /* Forces Logo to be WHITE */
+    object-fit: contain;
+  }
+
+  /* --- SEARCH ICON (Col 3) --- */
+  .mobile-search-icon {
+    display: flex;
+    /* Pushes icon to the far right edge of its cell */
+    justify-self: end; 
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+
+  /* Magnifying Glass Circle */
+  .search-glass {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: 4px solid #000000; /* Thick Black Border */
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  /* Magnifying Glass Handle */
+  .search-glass::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 14px;
+    background: #000000;
+    bottom: -10px;
+    right: -6px;
+    transform: rotate(-45deg);
+  }
+
+  /* --- HIDE DESKTOP ELEMENTS --- */
+  .navbar-links,
+  .desktop-btn-wrapper {
+    display: none !important;
+  }
+
+  /* --- MOBILE DROPDOWN --- */
+  .navbar-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 0;
+    gap: 25px;
+    text-align: center;
+    list-style: none;
+    z-index: 90;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+  }
+  
+  .mobile-btn-wrapper {
+    display: block;
   }
 }
