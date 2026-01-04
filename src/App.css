@@ -1,0 +1,29 @@
+/* 1. RESET THE BODY */
+/* This overrides the default settings that force center alignment */
+body {
+  margin: 0;
+  padding: 0;
+  display: block !important; /* STOPS Flexbox centering */
+  place-items: start !important; /* Forces content to start at the TOP */
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ffffff !important;
+}
+
+/* 2. FIX THE ROOT CONTAINER */
+/* This ensures the 'App' div takes up the full screen width */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: block; /* Ensures elements stack from top to bottom */
+}
+
+/* Optional: Ensure the Navbar itself sticks to the top */
+.navbar-container {
+  top: 0;
+  left: 0;
+  position: relative; /* Or 'fixed' if you want it to stay while scrolling */
+}
