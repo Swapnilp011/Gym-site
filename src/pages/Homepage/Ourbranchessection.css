@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+.branches-section {
+  padding: 60px 5%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.branches-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+/* --- GRID LAYOUT --- */
+.branches-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Cards in a row */
+  gap: 35px; /* Space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- CARD STYLING --- */
+.branch-card {
+  background-color: #fff;
+  border: 2px solid #000000; /* Black Border */
+  border-radius: 20px;       /* Rounded Corners */
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Logo inside the card */
+.branch-logo-wrapper {
+  margin-bottom: 5px;
+}
+
+.branch-logo {
+  width: 125px; /* Adjust based on your logo size */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Branch Name Text */
+.branch-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* --- BUTTON STYLING --- */
+.branch-btn {
+  background-color: #b91c1c; /* Dark Red */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px; /* Pill Shape */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Makes button fill the width or set fixed width like 150px */
+  max-width: 180px;
+}
+
+.branch-btn:hover {
+  background-color: #991b1b; /* Darker red on hover */
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1024px) {
+  .branches-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .branches-container {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+  
+  .branch-card {
+    padding: 20px; /* Slightly less padding on mobile */
+  }
+}
