@@ -2,26 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
 
 .services-section {
-  padding: 60px 5%; /* Top/Bottom padding, Side padding */
+  padding: 60px 5%;
   background-color: #ffffff;
   text-align: center;
 }
 
 .services-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 60px;
+  font-size: 3.5rem;
   font-weight: 800;
   color: #000;
-  margin-bottom: 50px; /* Space between title and grid */
+  margin-bottom: 50px;
 }
 
 /* THE GRID LAYOUT */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Equal Columns */
-  gap: 40px; /* Space between cards */
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns Desktop */
+  gap: 40px;
   max-width: 1200px;
-  margin: 0 auto; /* Centers the grid on large screens */
+  margin: 0 auto;
 }
 
 /* INDIVIDUAL CARD */
@@ -34,25 +34,24 @@
 }
 
 .service-card:hover {
-  transform: translateY(-5px); /* Subtle lift effect on hover */
+  transform: translateY(-5px);
 }
 
 .image-wrapper {
   width: 100%;
-  height: 250px; /* Fixed height for uniformity */
+  height: 250px;
   overflow: hidden;
-  border-radius: 20px; /* Rounded corners like the design */
+  border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .service-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image covers the box without stretching */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-/* Zoom effect on hover */
 .service-card:hover .service-img {
   transform: scale(1.05);
 }
@@ -64,21 +63,76 @@
   color: #000;
   margin-top: 20px;
   text-align: center;
+  line-height: 1.3;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* --- VIEW ALL BUTTON (Styled to match image) --- */
+.view-all-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-btn {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #000000;     /* Black Border */
+  padding: 12px 45px;
+  border-radius: 30px;           /* Pill shape */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;                /* Black Text */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ============================
+   MOBILE RESPONSIVENESS
+   ============================ */
+
+/* Tablet (Portrait) */
 @media (max-width: 1024px) {
   .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablet */
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    gap: 30px;
   }
 }
 
+/* Mobile (Landscape & Portrait) */
 @media (max-width: 768px) {
+  .services-section {
+    padding: 40px 15px;
+  }
+
+  .services-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* FORCE 2 COLUMNS ON MOBILE */
   .services-grid {
-    grid-template-columns: 1fr; /* 1 Column on Mobile */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+  }
+
+  .image-wrapper {
+    height: 130px; /* Adjusted height for mobile cards */
+    border-radius: 15px;
   }
   
-  .services-title {
-    font-size: 2rem;
+  .service-name {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  /* Button adjustments for mobile */
+  .view-all-btn {
+    padding: 10px 35px;
+    font-size: 1rem;
   }
 }
