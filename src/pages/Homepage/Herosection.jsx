@@ -1,18 +1,22 @@
 import React from 'react';
 import '../Homepage/Herosection.css';
-// 1. Import the SVG file
-// MAKE SURE THE PATH IS CORRECT relative to this file.
-// If Herosection.jsx is in src/components/home/ and the image is in src/assets/:
-import heroBgId from '../../assets/images/Heroimage.svg';
+
+// 1. IMPORT BOTH IMAGES
+// Rename your mobile image to 'HeroMobile.jpg' for clarity
+import heroBgDesktop from '../../assets/images/Heroimage.svg';
+import heroBgMobile from '../../assets/images/HeroMobile.svg'; 
 
 const Hero = () => {
   return (
-    // 2. Pass the imported image directly into the inline style
     <section 
       className="hero-container" 
-      style={{ backgroundImage: `url(${heroBgId})` }}
+      // 2. Pass both images as CSS Variables
+      style={{ 
+        '--bg-desktop': `url(${heroBgDesktop})`,
+        '--bg-mobile': `url(${heroBgMobile})`
+      }}
     >
-      {/* The dark overlay on top of the image */}
+      {/* Overlay: Visible on Desktop, Hidden/Adjusted on Mobile */}
       <div className="hero-overlay"></div>
       
       <div className="hero-content">
