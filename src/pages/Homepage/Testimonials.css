@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+.testimonials-section {
+  padding: 80px 5%; /* Spacing from sides */
+  background-color: #f9f9f9; /* Light grey bg to separate from white sections */
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+/* --- GRID LAYOUT --- */
+.testimonials-container {
+  display: grid;
+  /* Auto-fit creates columns: 3 on desktop, 2 on tablet, 1 on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- CARD STYLING --- */
+.testimonial-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Lifts up on hover */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border-color: #c92a2a; /* Red border on hover */
+}
+
+/* --- HEADER (Image + Name) --- */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.client-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circle shape */
+  object-fit: cover;
+  border: 2px solid #c92a2a; /* Red border around photo */
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.client-role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666; /* Grey text for role */
+}
+
+/* --- REVIEW TEXT --- */
+.testimonial-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* --- STAR RATING --- */
+.star-rating {
+  color: #ffc107; /* Gold color */
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .testimonials-container {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+  
+  .testimonial-card {
+    padding: 20px;
+  }
+}

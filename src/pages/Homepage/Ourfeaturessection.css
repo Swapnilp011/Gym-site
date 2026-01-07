@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+.features-section {
+  padding: 60px 0;
+  background-color: #ffffff;
+  text-align: center;
+  /* CRITICAL FIX: Cuts off anything causing side-scroll/spacing issues */
+  overflow: hidden; 
+  width: 100%;
+  position: relative;
+}
+
+.features-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+/* --- CAROUSEL CONTAINER --- */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px; /* Limits width so it doesn't look stretched on big screens */
+  height: 400px;
+  margin: 0 auto; /* Centers the container */
+  perspective: 1000px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- SLIDE STYLES --- */
+.slide {
+  position: absolute;
+  /* RESTORED: 55% width creates the "Card" look (not full screen) */
+  width: 55%; 
+  height: 100%;
+  max-height: 400px;
+  
+  /* CENTER THE CARDS by default */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  opacity: 0; 
+  z-index: 0;
+  background-color: #000; 
+}
+
+.feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- ACTIVE SLIDE (Center) --- */
+.slide.active {
+  opacity: 1;
+  /* Perfectly centered, full scale */
+  transform: translateX(0) scale(1);
+  z-index: 10;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3); /* Stronger shadow for pop */
+}
+
+/* --- PREVIOUS SLIDE (Left) --- */
+.slide.prev {
+  opacity: 1;
+  /* Moves left by 60% of its width, shrinks to 85% size */
+  transform: translateX(-60%) scale(0.85); 
+  z-index: 5;
+  filter: brightness(0.7); /* Optional: darkens side cards slightly for depth */
+}
+
+/* --- NEXT SLIDE (Right) --- */
+.slide.next {
+  opacity: 1;
+  /* Moves right by 60% of its width, shrinks to 85% size */
+  transform: translateX(60%) scale(0.85); 
+  z-index: 5;
+  filter: brightness(0.7);
+}
+
+/* --- CAPTION --- */
+.feature-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* --- DOTS NAVIGATION --- */
+.carousel-dots {
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 20;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #c92a2a;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 280px;
+  }
+  
+  .slide {
+    /* On mobile, we DO want it wider so it's readable */
+    width: 80%; 
+    height: 100%;
+  }
+  
+  .slide.prev {
+    /* Tighter overlap on small screens */
+    transform: translateX(-15%) scale(0.85);
+    opacity: 0; /* Optional: Hide side cards on mobile if it looks cluttered */
+  }
+  
+  .slide.next {
+    transform: translateX(15%) scale(0.85);
+    opacity: 0;
+  }
+  
+  .features-title {
+    font-size: 2rem;
+  }
+}

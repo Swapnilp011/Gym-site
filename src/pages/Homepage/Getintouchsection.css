@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+.footer-section {
+  background-color: #ffffff;
+  padding: 80px 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+  gap: 50px;
+}
+
+/* --- LEFT SIDE --- */
+.footer-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center; 
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.contact-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.address-text {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* --- RIGHT SIDE --- */
+.footer-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Keeps links aligned to start */
+  padding-top: 20px;
+}
+
+.footer-links-wrapper {
+  display: flex;
+  gap: 80px; /* Space between "About" and "Career" columns */
+  margin-bottom: 30px; /* Space before social icons */
+  width: 100%;
+}
+
+.column-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e67e22; /* Orange/Gold color */
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #c92a2a; 
+}
+
+/* --- SOCIAL ICONS (Centered) --- */
+.social-media-container {
+  display: flex;
+  gap: 20px;
+  
+  /* Centers the icons relative to the Right Column */
+  align-self: center; 
+  
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .footer-left, .footer-right {
+    width: 100%;
+  }
+
+  .footer-links-wrapper {
+    gap: 50px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .social-media-container {
+    align-self: flex-start; /* Re-align left on mobile if preferred */
+    margin-left: 0; 
+  }
+  
+  .footer-title {
+    font-size: 2rem;
+  }
+}
