@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.copyright-section {
+  width: 100%;
+  background-color: #9d2222; /* Deep Red matching your theme */
+  padding: 15px 5%; /* 5% side padding aligns it with your other sections */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.copyright-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000000; /* Black Text */
+  margin: 0;
+}
+
+/* Optional: Center text on mobile if desired */
+@media (max-width: 600px) {
+  .copyright-text {
+    font-size: 0.85rem;
+  }
+}

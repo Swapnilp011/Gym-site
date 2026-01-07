@@ -8,6 +8,7 @@ import Features from "../pages/Homepage/Ourfeaturessection.jsx";
 import Testimonials from "../pages/Homepage/Testimonials.jsx";
 import ContactSection from "../pages/Homepage/Contactus.jsx";
 import Getintouch from "../pages/Homepage/Getintouchsection.jsx";
+import Footer from "../components/common/footer.jsx";
 
 
 const AppRoutes = () => {
@@ -23,7 +24,8 @@ const AppRoutes = () => {
             <Features/>
             <Testimonials/>
             <ContactSection/>
-            <Getintouch/>{/* Add it here */}
+            <Getintouch/>
+            <Footer/>{/* Add it here */}
           </>
         } />
       </Routes>
