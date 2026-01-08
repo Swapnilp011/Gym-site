@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // 1. Import Link
 import './Navbar.css';
-// UPDATE THIS PATH to your actual logo
 import logo from '../../assets/images/Logo.svg'; 
 
 const Navbar = () => {
@@ -24,16 +24,39 @@ const Navbar = () => {
 
       {/* 2. LOGO SECTION (Center) */}
       <div className="navbar-logo-wrapper">
-        <img src={logo} alt="Beast Gym" className="navbar-logo-img" />
+        {/* Wrap logo in Link to Home */}
+        <Link to="/">
+          <img src={logo} alt="Beast Gym" className="navbar-logo-img" />
+        </Link>
       </div>
 
-      {/* 3. DESKTOP LINKS (Hidden on Mobile) */}
+      {/* 3. DESKTOP LINKS */}
       <ul className={isMobile ? "navbar-links-mobile" : "navbar-links"}>
-        <li onClick={() => setIsMobile(false)}><a href="#home" className="nav-link active">Home</a></li>
-        <li onClick={() => setIsMobile(false)}><a href="#services" className="nav-link">Services</a></li>
-        <li onClick={() => setIsMobile(false)}><a href="#branches" className="nav-link">Branches</a></li>
-        <li onClick={() => setIsMobile(false)}><a href="#about" className="nav-link">About Us</a></li>
-        <li onClick={() => setIsMobile(false)}><a href="#plans" className="nav-link">Plans</a></li>
+        
+        {/* HOME: Use Link to "/" */}
+        <li onClick={() => setIsMobile(false)}>
+          <Link to="/" className="nav-link active">Home</Link>
+        </li>
+        
+        {/* SERVICES: Use /#services to force go to Home then scroll */}
+        <li onClick={() => setIsMobile(false)}>
+          <a href="/#services" className="nav-link">Services</a>
+        </li>
+        
+        {/* BRANCHES: Use /#branches */}
+        <li onClick={() => setIsMobile(false)}>
+          <a href="/#branches" className="nav-link">Branches</a>
+        </li>
+        
+        {/* ABOUT US: Use Link to "/about" (This opens the new page) */}
+        <li onClick={() => setIsMobile(false)}>
+          <Link to="/about" className="nav-link">About Us</Link>
+        </li>
+        
+        {/* PLANS: Use /#plans */}
+        <li onClick={() => setIsMobile(false)}>
+          <a href="/#plans" className="nav-link">Plans</a>
+        </li>
         
         {/* Mobile Button */}
         <li className="mobile-btn-wrapper">
@@ -41,12 +64,12 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* 4. DESKTOP BUTTON (Hidden on Mobile) */}
+      {/* 4. DESKTOP BUTTON */}
       <div className="desktop-btn-wrapper">
         <button className="navbar-btn">Contact us</button>
       </div>
 
-      {/* 5. SEARCH ICON (Right) */}
+      {/* 5. SEARCH ICON */}
       <div className="mobile-search-icon">
         <span className="search-glass"></span>
       </div>
