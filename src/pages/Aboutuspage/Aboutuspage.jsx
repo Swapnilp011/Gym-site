@@ -8,6 +8,7 @@ import React from 'react';
 // IMPORT SECTIONS
 import AboutSection from '../Aboutuspage/Aboutus.jsx'; // <--- IMPORT NEW SECTION
 import OurGoal from '././OurGoal.jsx'; 
+import Getintouch from '../Homepage/Getintouchsection.jsx';
 
 // 2. IMPORT IMAGES
 // Note: 'aboutImage' is no longer needed here because it's inside AboutSection.jsx
@@ -26,6 +27,8 @@ const AboutUs = () => {
 
       {/* --- OUR GOAL SECTION --- */}
       <OurGoal />
+
+      <Getintouch/>
 
       {/* <Footer /> */}
 

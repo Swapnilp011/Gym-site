@@ -110,7 +110,8 @@
 /* Social Icons */
 .social-media-container {
   display: flex;
-  gap: 15px;
+  gap: 28px;
+    padding-left: 30px;
 }
 
 .social-icon {
