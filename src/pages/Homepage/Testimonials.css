@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 .testimonials-section {
-  padding: 80px 5%; /* Spacing from sides */
-  background-color: #f9f9f9; /* Light grey bg to separate from white sections */
+  padding: 10px 5%; /* Spacing from sides */
+  /* background-color: #f9f9f9; Light grey bg to separate from white sections */
   text-align: center;
+      padding-bottom: 80px;
+
 }
 
 .section-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-size: 60px;
   font-weight: 800;
   color: #000;
   margin-bottom: 60px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* --- GRID LAYOUT --- */
@@ -36,11 +38,7 @@
   border: 1px solid #eee;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-10px); /* Lifts up on hover */
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-  border-color: #c92a2a; /* Red border on hover */
-}
+
 
 /* --- HEADER (Image + Name) --- */
 .card-header {

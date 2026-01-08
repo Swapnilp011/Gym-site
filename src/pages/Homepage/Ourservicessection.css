@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
 
 .services-section {
-  padding: 60px 5%;
+  padding: 5px 5%;
   background-color: #ffffff;
   text-align: center;
 }
@@ -12,7 +12,8 @@
   font-size: 3.5rem;
   font-weight: 800;
   color: #000;
-  margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 25px;
 }
 
 /* THE GRID LAYOUT */
@@ -106,7 +107,7 @@
 /* Mobile (Landscape & Portrait) */
 @media (max-width: 768px) {
   .services-section {
-    padding: 40px 15px;
+    padding: 5px 15px;
   }
 
   .services-title {
