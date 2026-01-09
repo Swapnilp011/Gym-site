@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Planspage/Fullplan.css';
 
-// Import your background image (The dark gym interior)
 import bgImage from '../../assets/images/plan1.svg'; 
 
 const FullGymPlan = () => {
@@ -9,7 +8,7 @@ const FullGymPlan = () => {
     { title: '1 Month\nPlan', price: '₹1500 /--' },
     { title: '6 Month\nPlan', price: '₹7500 /--' },
     { title: '1 Year\nPlan', price: '₹12000 /--' },
-    { title: '1 Year\nPlan', price: '₹12000 /--' }, // Duplicate as shown in image
+    { title: '1 Year\nPlan', price: '₹12000 /--' }, 
   ];
 
   const features = [
@@ -39,7 +38,14 @@ const FullGymPlan = () => {
             <div key={index} className="glass-card">
               <h3 className="card-title">{plan.title}</h3>
               <p className="card-price">{plan.price}</p>
-              <button className="card-btn">Contact us</button>
+              
+              {/* --- UPDATED BUTTON --- */}
+              {/* Changed from <button> to <a> to link to homepage section */}
+              <a href="#contact" className="card-btn">
+                Contact us
+              </a>
+              
+              
             </div>
           ))}
         </div>

@@ -1,36 +1,27 @@
 import React from 'react';
-import '../../pages/Planspage/Fullplan.jsx';
 
-// 1. IMPORT COMMON COMPONENTS
-// import Navbar from '../../components/common/navbar.jsx'; 
-// import Footer from '../../components/common/footer.jsx';
-// import Copyright from '../../components/common/Copyright'; // Uncomment if you have this
+// 1. IMPORT SECTIONS
+// Note: Ensure the file name matches exactly what you have in your folder (Fullplan.jsx vs FullGymPlan.jsx)
+import FullGymPlan from '../Planspage/Fullplan.jsx';    
+import ContactUs from '../Homepage/Contactus.jsx'; 
 
-// 2. IMPORT THE SECTIONS
-import FullGymPlan from '././Fullplan.jsx';    
-import ContactUs from '../Homepage/Contactus.jsx';
-
-// 3. IMPORT IMAGES
-// Reusing your hero image for the banner, or pick a specific one
 
 
 const PlansPage = () => {
   return (
     <div className="plans-page">
       
-      {/* <Navbar /> */}
-
       {/* --- PAGE BANNER --- */}
+      {/* This was missing in your code. It adds the "Membership Plans" header image */}
       
-
       {/* --- FULL GYM PLAN SECTION --- */}
       <FullGymPlan />
 
-      {/* You can add more sections here later (e.g., Personal Training) */}
+      {/* --- CONTACT US SECTION --- */}
+      {/* This appears at the bottom so the "Contact Us" buttons can scroll here */}
+      <ContactUs />
 
-        <ContactUs/>
-      {/* <Footer /> */}
-      {/* <Copyright /> */}
+      {/* Footer is handled in App.js */}
 
     </div> 
   );

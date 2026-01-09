@@ -2,6 +2,12 @@ import React from 'react';
 import './ContactUs.css';
 
 const ContactUs = () => {
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Thank you! We will contact you soon.");
+  };
+
   return (
     <section className="contact-section" id="contact">
       <div className="contact-card">
@@ -11,7 +17,7 @@ const ContactUs = () => {
           We're here to help you start your fitness journey.
         </p>
 
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           {/* Full Name */}
           <input 
             type="text" 

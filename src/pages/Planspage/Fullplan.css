@@ -38,9 +38,10 @@
 .section-title {
   font-size: 64px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   text-transform: capitalize;
   color: white;
+  margin-top: 0px;
 }
 
 /* --- UPDATED: CARDS IN ONE ROW --- */
