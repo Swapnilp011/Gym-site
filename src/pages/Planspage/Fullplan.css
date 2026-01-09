@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+.full-gym-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+/* Dark Overlay */
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+
+}
+
+.section-title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+  color: white;
+}
+
+/* --- UPDATED: CARDS IN ONE ROW --- */
+.cards-row {
+  display: flex;
+  justify-content: center; /* Centers the row of cards */
+  gap: 30px;
+  flex-wrap: wrap; /* Allows wrapping on mobile, but stays in row on desktop */
+  margin-bottom: 50px;
+}
+
+/* Card Styling */
+.glass-card {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 20px;
+    padding: 20px 0px;
+      width: 260px; /* Fixed width to ensure 4 fit on standard screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  white-space: pre-line;
+  line-height: 1.2;
+}
+
+.card-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.card-btn {
+  background-color: #c91c1c;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #ff3333;
+}
+
+/* --- FEATURES LIST STYLING --- */
+.features-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two Columns for features */
+  gap: 15px 80px;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  justify-items: start;
+}
+
+.feature-item {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.bullet {
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  /* On tablets, maybe show 2 per row */
+  .glass-card {
+    width: 45%; 
+  }
+}
+
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .cards-row {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .glass-card {
+    width: 100%; /* Stack on mobile */
+  }
+
+  .features-list {
+    grid-template-columns: 1fr; /* Single column features on mobile */
+    gap: 15px;
+    justify-items: center;
+  }
+  
+  .feature-item {
+    text-align: center;
+  }
+}

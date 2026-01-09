@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // 1. Import Link
+import { Link } from 'react-router-dom'; // 1. IMPORT LINK
 import './Navbar.css';
+
+// Make sure this path to your logo is correct
 import logo from '../../assets/images/Logo.svg'; 
 
 const Navbar = () => {
@@ -9,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="navbar-container">
       
-      {/* 1. HAMBURGER MENU (Left) */}
+      {/* 1. HAMBURGER MENU */}
       <div className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? (
           <span className="close-icon">&times;</span>
@@ -22,40 +24,40 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* 2. LOGO SECTION (Center) */}
+      {/* 2. LOGO */}
       <div className="navbar-logo-wrapper">
-        {/* Wrap logo in Link to Home */}
         <Link to="/">
           <img src={logo} alt="Beast Gym" className="navbar-logo-img" />
         </Link>
       </div>
 
-      {/* 3. DESKTOP LINKS */}
+      {/* 3. LINKS */}
       <ul className={isMobile ? "navbar-links-mobile" : "navbar-links"}>
         
-        {/* HOME: Use Link to "/" */}
+        {/* HOME -> Goes to / */}
         <li onClick={() => setIsMobile(false)}>
           <Link to="/" className="nav-link active">Home</Link>
         </li>
         
-        {/* SERVICES: Use /#services to force go to Home then scroll */}
+        {/* SERVICES -> Scrolls to section on Home */}
         <li onClick={() => setIsMobile(false)}>
           <a href="/#services" className="nav-link">Services</a>
         </li>
         
-        {/* BRANCHES: Use /#branches */}
+        {/* BRANCHES -> Scrolls to section on Home */}
         <li onClick={() => setIsMobile(false)}>
           <a href="/#branches" className="nav-link">Branches</a>
         </li>
         
-        {/* ABOUT US: Use Link to "/about" (This opens the new page) */}
+        {/* ABOUT US -> Opens About Page */}
         <li onClick={() => setIsMobile(false)}>
           <Link to="/about" className="nav-link">About Us</Link>
         </li>
         
-        {/* PLANS: Use /#plans */}
+        {/* PLANS -> Opens Plans Page */}
+        {/* ⚠️ THIS WAS THE ISSUE. IT MUST BE <Link>, NOT <a> */}
         <li onClick={() => setIsMobile(false)}>
-          <a href="/#plans" className="nav-link">Plans</a>
+          <Link to="/plans" className="nav-link">Plans</Link>
         </li>
         
         {/* Mobile Button */}
