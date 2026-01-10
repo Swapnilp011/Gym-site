@@ -3,6 +3,11 @@ import React from 'react';
 // 1. IMPORT SECTIONS
 // Note: Ensure the file name matches exactly what you have in your folder (Fullplan.jsx vs FullGymPlan.jsx)
 import FullGymPlan from '../Planspage/Fullplan.jsx';    
+import Yogaplan from '../Planspage/Yogaplan.jsx';
+
+
+
+
 import ContactUs from '../Homepage/Contactus.jsx'; 
 
 
@@ -16,6 +21,8 @@ const PlansPage = () => {
       
       {/* --- FULL GYM PLAN SECTION --- */}
       <FullGymPlan />
+
+      <Yogaplan/>
 
       {/* --- CONTACT US SECTION --- */}
       {/* This appears at the bottom so the "Contact Us" buttons can scroll here */}
