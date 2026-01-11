@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 .goal-section {
-  padding: 80px 5%;
+  padding: 20px 5% 40px 5%;
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -11,7 +11,7 @@
   font-size: 3rem;
   font-weight: 800;
   color: #000;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   text-transform: uppercase; /* Makes "Our Goal" look bold and strong */
 }
 
