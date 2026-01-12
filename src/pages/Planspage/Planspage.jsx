@@ -5,6 +5,7 @@ import React from 'react';
 import FullGymPlan from '../Planspage/Fullplan.jsx';    
 import Yogaplan from '../Planspage/Yogaplan.jsx';
 import ZumbaPlan from './Zumba.jsx';
+import ComboPlan from './Comboplan.jsx';
 
 
 
@@ -24,6 +25,7 @@ const PlansPage = () => {
 
       <Yogaplan/>
       <ZumbaPlan/>
+      <ComboPlan/>
 
       {/* --- CONTACT US SECTION --- */}
       {/* This appears at the bottom so the "Contact Us" buttons can scroll here */}
