@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // 1. IMPORT LINK
-import './Navbar.css';
+import '../common/navbar.css';
 
 // Make sure this path to your logo is correct
 import logo from '../../assets/images/Logo.svg'; 
