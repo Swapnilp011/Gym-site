@@ -5,11 +5,17 @@ import '../Homepage/Ourfeaturessection.css';
 import feature1 from '../../assets/images/feature1.svg';
 import feature2 from '../../assets/images/feature2.svg';
 import feature3 from '../../assets/images/feature3.svg';
+import feature4 from '../../assets/images/feature4.svg';
+import feature5 from '../../assets/images/feature5.svg';
+import feature6 from '../../assets/images/feature6.svg';
 
 const featuresData = [
   { id: 1, image: feature1, title: "Modern Equipment" },
   { id: 2, image: feature2, title: "Spacious Gym Floor" },
   { id: 3, image: feature3, title: "Certified Trainers" },
+  { id: 3, image: feature4, title: "Certified Trainers" },
+  { id: 3, image: feature5, title: "Certified Trainers" },
+  { id: 3, image: feature6, title: "Certified Trainers" },
 ];
 
 const Features = () => {
