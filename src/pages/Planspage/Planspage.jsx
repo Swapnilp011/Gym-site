@@ -6,6 +6,7 @@ import FullGymPlan from '../Planspage/Fullplan.jsx';
 import Yogaplan from '../Planspage/Yogaplan.jsx';
 import ZumbaPlan from './Zumba.jsx';
 import ComboPlan from './Comboplan.jsx';
+import Getintouch from '../Homepage/Getintouchsection.jsx';
 
 
 
@@ -31,6 +32,7 @@ const PlansPage = () => {
       {/* This appears at the bottom so the "Contact Us" buttons can scroll here */}
       <ContactUs />
 
+    <Getintouch/>
       {/* Footer is handled in App.js */}
 
     </div> 
