@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 // import Navbar from "../components/common/navbar.jsx";
-import Hero from "../pages/Homepage/HeroSection.jsx"; 
+import Hero from "../pages/Homepage/Herosection.jsx"; 
 import Services from "../pages/Homepage/Ourservicessection.jsx"; 
 import Branches from "../pages/Homepage/Ourbranchessection.jsx";
 import Features from "../pages/Homepage/Ourfeaturessection.jsx";
