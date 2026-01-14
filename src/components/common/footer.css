@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .copyright-section {
-  width: 100%;
+  /* width: 100%; */
   background-color: #9d2222; /* Deep Red matching your theme */
   padding: 15px 5%; /* 5% side padding aligns it with your other sections */
   box-sizing: border-box;
