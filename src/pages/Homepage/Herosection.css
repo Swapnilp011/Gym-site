@@ -6,7 +6,7 @@
 .hero-container {
   /* Calculate height minus navbar */
   height: calc(100vh - 90px); 
-  width: 100%;
+  /* width: 100%; */
   
   /* Desktop Image via CSS Variable */
   background-image: var(--bg-desktop);

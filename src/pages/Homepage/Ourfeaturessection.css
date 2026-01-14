@@ -6,7 +6,7 @@
   text-align: center;
   /* CRITICAL FIX: Cuts off anything causing side-scroll/spacing issues */
   overflow: hidden; 
-  width: 100%;
+  /* width: 100%; */
   position: relative;
 }
 
