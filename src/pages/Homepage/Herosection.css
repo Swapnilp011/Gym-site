@@ -78,6 +78,7 @@
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem; /* Smaller text for standard tablets */
+    padding-top: 684px;
   }
   .hero-container {
     padding-bottom: 50px;
