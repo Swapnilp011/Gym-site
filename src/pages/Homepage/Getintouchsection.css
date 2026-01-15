@@ -224,6 +224,27 @@
   }
   
 }
+@media (max-width: 480px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 0fr;
+        gap: 30px;
+        padding: 0 0px;
+    }
+    
+    .contact-icon {
+        width: 15px;
+        height: 15px;
+        padding: 8px;
+    }
+    .social-media-container {
+    display: flex;
+    gap: 23px;
+    padding-left: 30px;
+}
+}
+
+
 
 @media (max-width: 480px){
 .social-icon {
