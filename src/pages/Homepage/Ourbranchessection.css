@@ -138,8 +138,10 @@
   }
   
   .branch-card {
-    padding: 25px;
+    
     max-width: 100%;
+    justify-self: center;
+    padding: 25px 40px 25px 40px;
   }
 
   .branch-btn {

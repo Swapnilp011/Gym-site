@@ -6,7 +6,7 @@ import gymLogo from '../../assets/images/logo2.svg';
 
 const branchesData = [
   { id: 1, name: "Beast Gym Pune", location: "Pune", link: "#" },
-  { id: 2, name: "Beast Gym Mumbai", location: "Mumbai", link: "#" },
+  { id: 2, name: "Beast Gym A Bad", location: "A Bad", link: "#" },
   { id: 3, name: "Beast Gym Delhi", location: "Delhi", link: "#" },
   { id: 4, name: "Beast Gym Bangalore", location: "Bangalore", link: "#" }
 ];

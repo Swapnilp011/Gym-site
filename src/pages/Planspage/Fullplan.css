@@ -153,7 +153,7 @@
 
 @media (max-width: 600px) {
   .glass-card {
-    width: 100%; /* Stack on mobile */
+    width: 75%; /* Stack on mobile */
   }
 
   .features-list {
