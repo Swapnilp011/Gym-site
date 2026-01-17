@@ -2,7 +2,6 @@
 
 .full-gym-section {
   position: relative;
-  /* width: 96.5%; */
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -15,7 +14,6 @@
   padding: 60px 20px;
 }
 
-/* Dark Overlay */
 .dark-overlay {
   position: absolute;
   top: 0;
@@ -44,16 +42,14 @@
   margin-top: 0px;
 }
 
-/* --- UPDATED: CARDS IN ONE ROW --- */
 .cards-row {
   display: flex;
-  justify-content: center; /* Centers the row of cards */
+  justify-content: center;
   gap: 30px;
-  flex-wrap: wrap; /* Allows wrapping on mobile, but stays in row on desktop */
+  flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
-/* Card Styling */
 .glass-card {
   background-color: rgba(30, 30, 30, 0.85);
   border-radius: 20px;
@@ -101,7 +97,6 @@
   background-color: #ff3333;
 }
 
-/* --- FEATURES LIST STYLING --- */
 .features-container {
   max-width: 900px;
   margin: 0 auto;
@@ -133,7 +128,6 @@
   line-height: 0;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   /* On tablets, maybe show 2 per row */
   .glass-card {
@@ -153,11 +147,11 @@
 
 @media (max-width: 600px) {
   .glass-card {
-    width: 75%; /* Stack on mobile */
+    width: 75%; 
   }
 
   .features-list {
-    grid-template-columns: 1fr; /* Single column features on mobile */
+    grid-template-columns: 1fr;
     gap: 15px;
     justify-items: center;
   }

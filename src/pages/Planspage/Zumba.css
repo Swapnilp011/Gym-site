@@ -103,7 +103,6 @@
   background-color: #ff3333;
 }
 
-/* --- FEATURES LIST STYLING --- */
 .zumba-features-container {
   max-width: 900px;
   margin: 0 auto;
@@ -135,7 +134,6 @@
   line-height: 0;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   .zumba-glass-card {
     width: 45%; 

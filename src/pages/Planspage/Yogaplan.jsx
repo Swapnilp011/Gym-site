@@ -30,14 +30,12 @@ const YogaPlan = () => {
       <div className="yoga-content-container">
         <h2 className="yoga-title">Yoga Plan</h2>
 
-        {/* CARDS ROW */}
         <div className="yoga-cards-row">
           {plans.map((plan, index) => (
             <div key={index} className="yoga-glass-card">
               <h3 className="yoga-card-title">{plan.title}</h3>
               <p className="yoga-card-price">{plan.price}</p>
               
-              {/* Button linking to Contact Section */}
               <a href="#contact" className="yoga-card-btn">
                 Contact us
               </a>
@@ -45,7 +43,6 @@ const YogaPlan = () => {
           ))}
         </div>
 
-        {/* FEATURES LIST */}
         <div className="yoga-features-container">
           <ul className="yoga-features-list">
             {features.map((feature, index) => (

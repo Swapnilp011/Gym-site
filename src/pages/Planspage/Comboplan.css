@@ -2,7 +2,6 @@
 
 .combo-section {
   position: relative;
-  /* width: 97.1%; */
 
   min-height: 100vh;
   background-size: cover;
@@ -16,7 +15,6 @@
   padding: 60px 20px;
 }
 
-/* Dark Overlay */
 .combo-overlay {
   position: absolute;
   top: 0;
@@ -45,7 +43,6 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* --- CARDS ROW --- */
 .combo-cards-row {
   display: flex;
   justify-content: center;
@@ -54,7 +51,6 @@
   margin-bottom: 50px;
 }
 
-/* Card Styling */
 .combo-glass-card {
   background-color: rgba(30, 30, 30, 0.90); /* Slightly more opaque for readability */
   border-radius: 20px;
