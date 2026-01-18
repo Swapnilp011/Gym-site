@@ -21,8 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker to handle the detailed background */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6); 
 }
 
 .combo-content-container {
@@ -52,7 +51,7 @@
 }
 
 .combo-glass-card {
-  background-color: rgba(30, 30, 30, 0.90); /* Slightly more opaque for readability */
+  background-color: rgba(30, 30, 30, 0.90); 
   border-radius: 20px;
   padding: 20px 0px;
   width: 260px; 
@@ -99,7 +98,6 @@
   background-color: #ff3333;
 }
 
-/* --- FEATURES LIST STYLING --- */
 .combo-features-container {
   max-width: 900px;
   margin: 0 auto;
@@ -131,7 +129,6 @@
   line-height: 0;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   .combo-glass-card {
     width: 45%; 

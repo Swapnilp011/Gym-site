@@ -32,15 +32,12 @@ const FullGymPlan = () => {
       <div className="content-container">
         <h2 className="section-title">Full Gym Plan</h2>
 
-        {/* CARDS ROW */}
         <div className="cards-row">
           {plans.map((plan, index) => (
             <div key={index} className="glass-card">
               <h3 className="card-title">{plan.title}</h3>
               <p className="card-price">{plan.price}</p>
               
-              {/* --- UPDATED BUTTON --- */}
-              {/* Changed from <button> to <a> to link to homepage section */}
               <a href="#contact" className="card-btn">
                 Contact us
               </a>
@@ -50,7 +47,6 @@ const FullGymPlan = () => {
           ))}
         </div>
 
-        {/* FEATURES LIST */}
         <div className="features-container">
           <ul className="features-list">
             {features.map((feature, index) => (

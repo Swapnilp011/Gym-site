@@ -40,7 +40,7 @@
   text-transform: capitalize;
   color: white;
   margin-top: 0px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Shadow for readability on sunset */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
 }
 
 
@@ -53,7 +53,7 @@
 }
 
 .yoga-glass-card {
-  background-color: rgba(30, 30, 30, 0.85); /* Dark card like image */
+  background-color: rgba(30, 30, 30, 0.85); 
   border-radius: 20px;
   padding: 20px 0px;
   width: 260px; 
@@ -105,7 +105,7 @@
   max-width: 900px;
   margin: 0 auto;
   display: flex;
-  justify-content: center; /* Or flex-end if you want it to right like image */
+  justify-content: center; 
 }
 
 .yoga-features-list {
@@ -124,7 +124,7 @@
   align-items: center;
   gap: 10px;
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Ensure text is readable on sunset */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8); 
 }
 
 .yoga-bullet {

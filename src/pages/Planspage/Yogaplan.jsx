@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Planspage/Yogaplan.css';
 
-// Import your yoga background image (The sunset silhouette)
 import yogaBg from '../../assets/images/plan2.svg'; 
 
 const YogaPlan = () => {

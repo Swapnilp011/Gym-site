@@ -2,7 +2,6 @@
 
 .zumba-section {
   position: relative;
-  /* width: 96.5%; */
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -15,14 +14,13 @@
   padding: 60px 20px;
 }
 
-/* Dark Overlay */
 .zumba-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent to show the dancers */
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 1;
 }
 
@@ -44,7 +42,6 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* --- CARDS ROW --- */
 .zumba-cards-row {
   display: flex;
   justify-content: center;
@@ -53,7 +50,6 @@
   margin-bottom: 50px;
 }
 
-/* Card Styling */
 .zumba-glass-card {
   background-color: rgba(30, 30, 30, 0.85);
   border-radius: 20px;

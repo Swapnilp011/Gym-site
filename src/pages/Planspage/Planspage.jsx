@@ -26,7 +26,6 @@ const PlansPage = () => {
       <ContactUs />
 
     <Getintouch/>
-      {/* Footer is handled in App.js */}
 
     </div> 
   );
