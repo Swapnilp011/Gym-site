@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Homepage/Ourbranchessection.css';
 
-// IMPORT YOUR LOGO
 import gymLogo from '../../assets/images/logo2.svg'; 
 
 const branchesData = [
@@ -15,22 +14,18 @@ const Branches = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showAll, setShowAll] = useState(false);
 
-  // 1. Detect Mobile Screen (<= 480px)
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 480);
     };
     
-    // Check on initial load
     handleResize();
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // 2. Logic: 
-  // If on Mobile AND showAll is false -> Show only 3 items.
-  // Otherwise -> Show all items.
+ 
   const displayedBranches = (isMobile && !showAll) 
     ? branchesData.slice(0, 3) 
     : branchesData;
@@ -55,7 +50,6 @@ const Branches = () => {
         ))}
       </div>
 
-      {/* 3. Toggle Button: Only visible on Mobile */}
       {isMobile && (
         <div className="branch-view-all-container">
           <button className="branch-view-all-btn" onClick={toggleView}>

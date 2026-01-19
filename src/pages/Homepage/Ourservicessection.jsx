@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../Homepage/Ourservicessection.css';
 
-// IMPORT YOUR LOCAL IMAGES HERE
 import strengthImg from '../../assets/images/strength.svg';
 import cardioImg from '../../assets/images/cardio.svg';
 import yogaImg from '../../assets/images/yoga.svg';
@@ -20,23 +19,19 @@ const servicesData = [
 
 const Services = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [showAll, setShowAll] = useState(false); // State to toggle view
+  const [showAll, setShowAll] = useState(false); 
 
-  // 1. Detect Mobile Screen
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    handleResize(); // Check on load
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // 2. Logic: Show all if Desktop OR if 'showAll' is true. 
-  // Otherwise, show only first 4.
   const displayedServices = !isMobile || showAll ? servicesData : servicesData.slice(0, 4);
 
-  // 3. Toggle Function
   const toggleView = () => {
     setShowAll(!showAll);
   };
@@ -56,11 +51,9 @@ const Services = () => {
         ))}
       </div>
 
-      {/* 4. Button: Visible ONLY on Mobile */}
       {isMobile && (
         <div className="view-all-container">
           <button className="view-all-btn" onClick={toggleView}>
-            {/* Dynamic Text: "View less" if open, "View all" if closed */}
             {showAll ? 'View less' : 'View all'}
           </button>
         </div>
