@@ -1,8 +1,6 @@
 import React from 'react';
 import './Testimonials.css';
 
-// 1. IMPORT YOUR PHOTOS HERE
-// Make sure to rename your local files to match or update these names
 import client1 from '../../assets/images/client1.svg';
 import client2 from '../../assets/images/client2.svg';
 import client3 from '../../assets/images/client3.svg';
@@ -35,7 +33,6 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
-  // Helper to render stars
   const renderStars = (rating) => {
     return "★".repeat(rating);
   };

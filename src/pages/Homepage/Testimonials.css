@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
 .testimonials-section {
-  padding: 10px 5%; /* Spacing from sides */
-  /* background-color: #f9f9f9; Light grey bg to separate from white sections */
+  padding: 10px 5%;
   text-align: center;
       padding-bottom: 80px;
 
@@ -14,25 +13,21 @@
   font-weight: 800;
   color: #000;
   margin-bottom: 60px;
-  /* text-transform: uppercase; */
 }
 
-/* --- GRID LAYOUT --- */
 .testimonials-container {
   display: grid;
-  /* Auto-fit creates columns: 3 on desktop, 2 on tablet, 1 on mobile */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- CARD STYLING --- */
 .testimonial-card {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #eee;
@@ -40,7 +35,6 @@
 
 
 
-/* --- HEADER (Image + Name) --- */
 .card-header {
   display: flex;
   align-items: center;
@@ -51,9 +45,9 @@
 .client-img {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Circle shape */
+  border-radius: 50%; 
   object-fit: cover;
-  border: 2px solid #c92a2a; /* Red border around photo */
+  border: 2px solid #c92a2a; 
 }
 
 .client-info {
@@ -73,10 +67,9 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #666; /* Grey text for role */
+  color: #666; 
 }
 
-/* --- REVIEW TEXT --- */
 .testimonial-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
@@ -86,21 +79,19 @@
   font-style: italic;
 }
 
-/* --- STAR RATING --- */
 .star-rating {
-  color: #ffc107; /* Gold color */
+  color: #ffc107; 
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
 
-/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
   }
   
   .testimonials-container {
-    grid-template-columns: 1fr; /* Stack vertically on mobile */
+    grid-template-columns: 1fr; 
   }
   
   .testimonial-card {
