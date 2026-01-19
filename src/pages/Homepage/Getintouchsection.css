@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
-/* --- MAIN CONTAINER --- */
 .footer-section {
   background-color: #ffffff;
   padding: 40px 5% 60px 5%;
@@ -16,7 +15,7 @@
   gap: 50px;
 }
 
-/* --- LEFT SIDE (Title + Contact) --- */
+
 .footer-left {
   flex: 1;
   min-width: 300px;
@@ -38,19 +37,18 @@
 
 .contact-item {
   display: flex;
-  align-items: center; /* Aligns icon vertically with text */
+  align-items: center; 
   gap: 15px;
 }
 
-/* Icon Styling (Grey Circle Background) */
 .contact-icon {
   width: 35px;
   height: 35px;
   object-fit: contain;
-  background-color: #e0e0e0; /* Grey circle background */
+  background-color: #e0e0e0; 
   border-radius: 50%;
-  padding: 10px; /* Space inside the circle */
-  flex-shrink: 0; /* Prevents icon from shrinking */
+  padding: 10px; 
+  flex-shrink: 0; 
 }
 
 .contact-text {
@@ -64,7 +62,6 @@
   font-size: 0.85rem;
 }
 
-/* --- RIGHT SIDE (Links + Socials) --- */
 .footer-right {
   flex: 1;
   min-width: 300px;
@@ -83,7 +80,7 @@
 .column-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #e67e22; /* Orange color */
+  color: #e67e22;
   margin-bottom: 20px;
   padding-left: 15px;
 }
@@ -108,7 +105,6 @@
   color: #c92a2a; 
 }
 
-/* Social Icons */
 .social-media-container {
   display: flex;
   gap: 28px;
@@ -133,24 +129,20 @@
    ========================================= */
 @media (max-width: 900px) {
   
-  /* 1. Turn the main container into a Grid */
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 Columns */
+    grid-template-columns: 1fr 1fr; 
     gap: 30px;
     padding: 0 10px;
   }
 
-  /* 2. Unwrap the wrappers to move children around */
   .footer-left, 
   .footer-right, 
   .contact-list {
-    display: contents; /* This removes the div from the layout flow, leaving its children */
+    display: contents; 
   }
 
-  /* 3. REORDERING ELEMENTS */
   
-  /* Order 1: Title (Spans full width at top) */
   .footer-title {
     grid-column: span 2;
     text-align: center;
@@ -159,52 +151,45 @@
     margin-bottom: 20px;
   }
 
-  /* Order 2: Links (Spans full width in middle) */
   .footer-links-wrapper {
     grid-column: span 2;
     order: 2;
-    justify-content: space-around; /* Spread About and Career evenly */
+    justify-content: space-around; 
     text-align: left;
     gap: 20px;
     margin-bottom: 30px;
   }
 
-  /* Order 3: Contact Info & Socials (The 2x2 Grid at bottom) */
   
-  /* Email: Row 3, Left */
   .contact-item:nth-child(1) { 
     order: 3;
     grid-column: 1; 
   }
 
-  /* Address: Row 3, Right */
   .contact-item:nth-child(3) { 
     order: 4;
     grid-column: 2; 
   }
 
-  /* Phone: Row 4, Left */
   .contact-item:nth-child(2) { 
     order: 5;
     grid-column: 1; 
   }
 
-  /* Social Icons: Row 4, Right */
   .social-media-container {
     order: 6;
     grid-column: 2;
-    align-self: center; /* Vertically center with phone */
+    align-self: center; 
     margin: 0;
   }
 
-  /* Mobile Adjustments for Text/Icons */
   .contact-item {
     align-items: flex-start;
   }
   
   .contact-text {
-    font-size: 0.8rem; /* Smaller text for mobile */
-    word-break: break-word; /* Prevent overflow */
+    font-size: 0.8rem; 
+    word-break: break-word; 
   }
 
   .contact-icon {
@@ -214,7 +199,6 @@
   }
 }
 
-/* Extra Small Screens fix */
 @media (max-width: 400px) {
   .footer-links-wrapper {
     gap: 20px;
