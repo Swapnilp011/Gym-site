@@ -1,8 +1,6 @@
 import React from 'react';
 import '././Aboutus.css'; 
 
-// IMPORT YOUR SPECIFIC IMAGE HERE
-// Since you said you have the image, update this path:
 import visionImage from '../../assets/images/about_img.svg'; 
 
 const AboutSection = () => {
@@ -12,12 +10,10 @@ const AboutSection = () => {
       
       <div className="vision-container">
         
-        {/* Left Side: Image */}
         <div className="vision-image-wrapper">
           <img src={visionImage} alt="Trust Your Vision" className="vision-img" />
         </div>
 
-        {/* Right Side: Text */}
         <div className="vision-content">
           <p className="vision-text">
             Beast Gym is more than just a fitness center — it’s a place

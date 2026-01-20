@@ -6,7 +6,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Main Title Centered */
 .vision-title {
   text-align: center;
   font-size: 3rem;
@@ -15,40 +14,37 @@
   margin-bottom: 30px;
 }
 
-/* Flex Container */
 .vision-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px; /* Space between image and text */
+  gap: 60px; 
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- IMAGE STYLING --- */
 .vision-image-wrapper {
   flex: 1;
   display: flex;
-  justify-content: center; /* Centers image in its half */
+  justify-content: center; 
 }
 
 .vision-img {
   width: 100%;
-  max-width: 500px; /* Keeps image from getting too huge */
-  border-radius: 25px; /* Rounded corners like the image */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Soft shadow */
+  max-width: 500px; 
+  border-radius: 25px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
   object-fit: cover;
 }
 
-/* --- TEXT STYLING --- */
 .vision-content {
   flex: 1;
-  text-align: center; /* IMPORTANT: Matches the centered text in your screenshot */
+  text-align: center;
 }
 
 .vision-text {
   font-size: 1.1rem;
-  font-weight: 700; /* Bold text like the screenshot */
+  font-weight: 700; 
   line-height: 1.8;
   color: #000;
   margin-bottom: 25px;
@@ -59,7 +55,7 @@
    ============================ */
 @media (max-width: 900px) {
   .vision-container {
-    flex-direction: column; /* Stack vertically */
+    flex-direction: column; 
     gap: 40px;
   }
   

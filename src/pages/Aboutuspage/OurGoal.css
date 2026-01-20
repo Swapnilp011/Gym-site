@@ -12,42 +12,39 @@
   font-weight: 800;
   color: #000;
   margin-bottom: 20px;
-  text-transform: uppercase; /* Makes "Our Goal" look bold and strong */
+  text-transform: uppercase; 
 }
 
-/* --- FLEX CONTAINER --- */
 .goal-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center; /* Vertically centers the text with the image */
-  gap: 60px; /* Space between image and text */
-  text-align: left; /* Resets text alignment for the content */
+  align-items: center; 
+  gap: 60px; 
+  text-align: left; 
 }
 
-/* --- IMAGE STYLING --- */
 .goal-image-wrapper {
-  flex: 1; /* Takes up 50% width */
+  flex: 1; 
   min-width: 300px;
 }
 
 .goal-img {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* Rounded corners like the image */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Soft shadow */
+  border-radius: 20px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
   object-fit: cover;
 }
 
-/* --- TEXT STYLING --- */
 .goal-content {
-  flex: 1; /* Takes up 50% width */
+  flex: 1;
 }
 
 .goal-text {
-  font-size: 1.1rem; /* Slightly larger for readability */
-  font-weight: 600;  /* Semi-bold like the image */
-  line-height: 1.8;  /* Good spacing between lines */
+  font-size: 1.1rem; 
+  font-weight: 600;  
+  line-height: 1.8; 
   color: #000;
   margin-bottom: 20px;
 }
@@ -57,7 +54,7 @@
    ============================ */
 @media (max-width: 900px) {
   .goal-container {
-    flex-direction: column; /* Stack vertically on mobile */
+    flex-direction: column; 
     gap: 40px;
   }
 
@@ -67,11 +64,11 @@
   }
 
   .goal-content {
-    text-align: center; /* Center text on mobile for better look */
+    text-align: center; 
   }
 
   .goal-text {
     font-size: 1rem;
-    text-align: justify; /* Optional: Makes text blocks look neat on mobile */
+    text-align: justify; 
   }
 }

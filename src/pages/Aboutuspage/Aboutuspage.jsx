@@ -1,36 +1,20 @@
 import React from 'react';
-// import './Aboutuspage.css';
 
-// 1. IMPORT COMPONENTS
-// import Navbar from '../../components/common/Navbar.jsx'; 
-// import Footer from '../../components/common/footer.jsx';
-
-// IMPORT SECTIONS
-import AboutSection from '../Aboutuspage/Aboutus.jsx'; // <--- IMPORT NEW SECTION
+import AboutSection from '../Aboutuspage/Aboutus.jsx'; 
 import OurGoal from '././OurGoal.jsx'; 
 import Getintouch from '../Homepage/Getintouchsection.jsx';
-
-// 2. IMPORT IMAGES
-// Note: 'aboutImage' is no longer needed here because it's inside AboutSection.jsx
 
 const AboutUs = () => {
   return (
     <div className="about-page">
       
-      {/* <Navbar /> */}
-
-      {/* --- PAGE BANNER --- */}
-      
-
-      {/* --- MAIN ABOUT TEXT SECTION --- */}
+     
       <AboutSection /> 
 
-      {/* --- OUR GOAL SECTION --- */}
       <OurGoal />
 
       <Getintouch/>
 
-      {/* <Footer /> */}
 
     </div> 
   );
