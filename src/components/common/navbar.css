@@ -4,10 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
 
 .navbar-container {
-  /* width: 100%; */
   height: 90px;
   background-color: #ffffff;
-  display: flex; /* Desktop uses Flexbox */
+  display: flex; 
   align-items: center;
   padding-right: 50px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -16,7 +15,6 @@
   box-sizing: border-box;
 }
 
-/* --- DESKTOP LOGO STYLES (Red Slant) --- */
 .navbar-logo-wrapper {
   background-color: #9d2222;
   height: 100%;
@@ -35,7 +33,6 @@
   object-fit: contain;
 }
 
-/* --- LINKS --- */
 .navbar-links {
   display: flex;
   list-style: none;
@@ -54,11 +51,6 @@
   transition: color 0.3s ease;
 }
 
-/* .nav-link.active, .nav-link:hover {
-  color: #cc2b2b;
-} */
-
-/* --- BUTTONS --- */
 .navbar-btn {
   background-color: #c92a2a;
   color: white;
@@ -72,7 +64,6 @@
   white-space: nowrap;
 }
 
-/* --- HIDE MOBILE ELEMENTS ON DESKTOP --- */
 .mobile-menu-icon,
 .mobile-search-icon,
 .navbar-links-mobile,
@@ -87,43 +78,37 @@
 @media (max-width: 600px) {
 
   .navbar-container {
-    /* 1. GRID LAYOUT ADJUSTMENT */
-    /* Col 1: Menu (Auto Width) */
-    /* Col 2: Logo Area (Takes remaining space) */
-    /* Col 3: Search (Auto Width) */
+    
     display: grid !important;
     grid-template-columns: auto 1fr auto; 
     align-items: center;
     
-    /* 2. Visual Style */
-    background-color: #b91c1c !important; /* Bold Red */
-    padding: 0 15px; /* Side padding */
+    background-color: #b91c1c !important;
+    padding: 0 15px; 
     height: 90px;
   }
 
-  /* --- HAMBURGER MENU (Col 1) --- */
   .mobile-menu-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 45px;
-    height: 28px; /* Taller for distinct separation */
+    height: 28px; 
     cursor: pointer;
     z-index: 101;
-    /* No margin needed, grid places it first */
   }
 
   .hamburger-lines {
-    display: contents; /* Allows children to use parent flex */
+    display: contents; 
   }
 
   .line {
     display: block;
-    height: 6px; /* Extra Thick lines */
+    height: 6px; 
     width: 100%;
     background-color: #000000;
     border-radius: 4px;
-    margin-bottom: 5px; /* Spacing between lines */
+    margin-bottom: 5px; 
   }
   
   .line:last-child {
@@ -136,9 +121,8 @@
     line-height: 0.5;
   }
 
-  /* --- LOGO WRAPPER (Col 2) --- */
   .navbar-logo-wrapper {
-    /* Reset Desktop Styles */
+    
     background-color: transparent !important;
     clip-path: none !important;
     width: 100% !important;
@@ -146,24 +130,21 @@
     margin: 0 !important;
     padding: 0 !important;
     
-    /* ALIGNMENT FIX: Move Logo to the LEFT */
     display: flex;
-    justify-content: flex-start; /* Aligns logo to left */
+    justify-content: flex-start; 
     align-items: center;
-    padding-left: 15px !important; /* Spacing between Menu and Logo */
+    padding-left: 15px !important; 
   }
 
   .navbar-logo-img {
-    max-width: 130px; /* Big, readable size */
+    max-width: 130px; 
     max-height: 70px;
-    filter: brightness(0) invert(1); /* Forces Logo to be WHITE */
+    filter: brightness(0) invert(1); 
     object-fit: contain;
   }
 
-  /* --- SEARCH ICON (Col 3) --- */
   .mobile-search-icon {
     display: flex;
-    /* Pushes icon to the far right edge of its cell */
     justify-self: end; 
     align-items: center;
     justify-content: center;
@@ -172,17 +153,15 @@
     cursor: pointer;
   }
 
-  /* Magnifying Glass Circle */
   .search-glass {
     display: block;
     width: 24px;
     height: 24px;
-    border: 4px solid #000000; /* Thick Black Border */
+    border: 4px solid #000000; 
     border-radius: 50%;
     position: relative;
   }
   
-  /* Magnifying Glass Handle */
   .search-glass::after {
     content: "";
     position: absolute;
@@ -194,13 +173,11 @@
     transform: rotate(-45deg);
   }
 
-  /* --- HIDE DESKTOP ELEMENTS --- */
   .navbar-links,
   .desktop-btn-wrapper {
     display: none !important;
   }
 
-  /* --- MOBILE DROPDOWN --- */
   .navbar-links-mobile {
     display: flex;
     flex-direction: column;
