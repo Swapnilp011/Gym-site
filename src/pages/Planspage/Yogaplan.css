@@ -2,7 +2,7 @@
 
 .yoga-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 
